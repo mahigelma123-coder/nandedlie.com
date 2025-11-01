@@ -1,47 +1,23 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="mr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>माझी पहिली वेबसाइट</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>महात्मा गांधी कॉलेज, नांदेड</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <h1>नमस्कार! ही माझी वेबसाइट आहे</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <header>
+    <h1>महात्मा गांधी कॉलेज, नांदेड</h1>
+    <p>ज्ञान हीच शक्ती!</p>
   </header>
 
-  <main>
-    <section id="about" class="card">
-      <h2>About</h2>
-      <p>ही एक साधी उदाहरण वेबसाइट आहे — HTML, CSS आणि JavaScript वापरून बनवलेली.</p>
-    </section>
-
-    <section id="services" class="card">
-      <h2>Services</h2>
-      <ul>
-        <li>वेबसाइट डेव्हलपमेंट</li>
-        <li>डिझाइन</li>
-        <li>SEO बेसिक्स</li>
-      </ul>
-    </section>
-
-    <section id="contact" class="card">
-      <h2>Contact</h2>
-      <p>ई-मेल: tumcha@email.com</p>
-      <button id="greetBtn">Greet me</button>
-      <p id="greetMsg"></p>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 तुमचं नाव</p>
-  </footer>
+  <section class="upload-section">
+    <h2>कॉलेज फोटो अपलोड करा</h2>
+    <input type="file" id="photoInput" accept="image/*">
+    <button onclick="uploadPhoto()">Upload</button>
+    <div id="gallery"></div>
+  </section>
 
   <script src="script.js"></script>
 </body>
