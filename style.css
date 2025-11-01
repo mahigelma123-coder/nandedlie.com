@@ -1,12 +1,16 @@
-*{box-sizing:border-box;font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif}
-body{margin:0;background:#f6f7fb;color:#111}
-.site-header{background:#0b63a3;color:#fff;padding:18px 20px;display:flex;justify-content:space-between;align-items:center}
-.site-header h1{font-size:18px;margin:0}
-.site-header nav a{color:#fff;margin-left:12px;text-decoration:none}
-main{max-width:900px;margin:24px auto;padding:0 16px}
-.card{background:#fff;padding:18px;margin-bottom:16px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.05)}
-footer{text-align:center;padding:14px;color:#666;font-size:14px}
-@media (max-width:600px){
-  .site-header{flex-direction:column;align-items:flex-start}
-  .site-header nav{margin-top:8px}
+function uploadPhoto() {
+  const input = document.getElementById('photoInput');
+  const gallery = document.getElementById('gallery');
+
+  if (input.files && input.files[0]) {
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      const img = document.createElement('img');
+      img.src = e.target.result;
+      gallery.appendChild(img);
+    }
+    reader.readAsDataURL(input.files[0]);
+  } else {
+    alert("कृपया एक फोटो निवडा!");
+  }
 }
